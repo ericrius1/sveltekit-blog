@@ -9,7 +9,7 @@ const config = {
 			srcDir: './src',
 			mode: 'development',
 			strategies: 'injectManifest',
-			filename: 'prompt-sw.ts',
+			filename: 'service-worker.ts',
 			scope: '/',
 			base: '/',
 			manifest: {
