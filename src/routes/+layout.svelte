@@ -9,6 +9,21 @@
 	import { fade } from 'svelte/transition';
 	import { siteTitle, siteURL } from '$lib/config.js';
 	export let data;
+	
+	
+	import {browser} from '$app/environment';
+	import {registerSW} from 'virtual:pwa-register';
+
+	if(browser){
+		const updateSW = registerSW({
+			onNeedRefresh(){
+				 // implement logic to prompt user to refresh for new content
+			},
+			onOfflineReady(){
+				console.log('App ready for offline usage')
+			}
+		})
+	}
 
 	const transitionIn = { delay: 150, duration: 150 };
 	const transitionOut = { duration: 100 };
