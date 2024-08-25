@@ -41,7 +41,6 @@ const config = {
 				type: 'module',
 				navigateFallback: '/'
 			},
-			// if you have shared info in svelte config file put in a separate module and use it also here
 			kit: {}
 		})
 	],
